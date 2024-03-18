@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>docsify-demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+</head>
+
+<body>
+<div id="app"></div>
+<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<!-- docsify-edit-on-github -->
+<script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+<script>
+    window.$docsify = {
+        name: 'docsify-demo',
+        repo: 'yxy-tom/docsify-demo',
+        maxLevel: 5, //最大支持渲染的标题层级
+        subMaxLevel: 4,
+        homepage: 'README.md',
+        coverpage: true,
+        loadSidebar: true,
+        auto2top: true, //切换页面后是否自动跳转到页面顶部
+        search: { //全文搜索
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+            paths: 'auto',
+            placeholder: 'Type to search',
+            noData: 'No Results!',
+            depth: 3, // 搜索标题的最大程级, 1 - 6
+            hideOtherSidebarContent: false,
+        },
+        plugins: [
+            EditOnGithubPlugin.create(
+                'https://github.com/yxy-tom/docsify-demo/blob/master/docs/',
+                null,
+                function (filename) {
+                    if (filename.indexOf('zh') !== -1) {
+                        return '在Github上编辑'
+                    } else {
+                        return 'Edit On Github'
+                    }
+                }
+            )
+        ]
+    }
+</script>
+<!-- 代码块Java类型高亮 -->
+<script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+<!-- 全文搜索 -->
+<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+<!-- 复制代码到剪贴板 -->
+<script src="//unpkg.com/docsify-copy-code"></script>
+<!-- 图片缩放 -->
+<script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+<!-- 字数统计 -->
+<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+</body>
+</html>
