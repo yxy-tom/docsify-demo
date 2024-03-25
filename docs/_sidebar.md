@@ -1,8 +1,8 @@
 - 快速开始
-  -  [一些案例](一些案例.md) 
-  - [Markdown语法](Markdown语法.md)
+  - [一些案例](一些案例.md) 
   - [Plugin示例](Plugin示例.md)
+  - [标题层级](标题层级.md)
 - 来自Copilot Chat
-  -  [FAQ](FAQ.md) 
-- 错误展示
+  - [FAQ](FAQ.md) 
+- 错误页面
   - [404](404.md)

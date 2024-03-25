@@ -4,5 +4,5 @@
 > An awesome project.
 
 [Go to Introduction](#introduction)
-[Go to Demo](#demo)
-[Go to Github](https://github.com/yxy-tom/docsify-demo)
+[Github Pages](https://yxy-tom.github.io/docsify-demo)
+[Github Docs](https://github.com/yxy-tom/docsify-demo)

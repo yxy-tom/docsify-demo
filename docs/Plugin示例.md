@@ -67,3 +67,7 @@ public class Main {
 
 
 
+> 图片缩放
+
+![image-20240312151744173](./assets/image-20240312151744173.png)
+
