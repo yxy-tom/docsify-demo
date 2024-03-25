@@ -9,6 +9,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
 </head>
 
 <body>
@@ -46,10 +47,20 @@
                     }
                 }
             )
-        ]
+        ],
+        pagination: {
+            previousText: '上一章节',
+            // or
+            nextText: {
+                '/en/': 'NEXT',
+                '/': '下一章节'
+            },
+            crossChapter: true,
+            crossChapterText: false,
+        },
     }
 </script>
-<!-- 代码块Java类型高亮 -->
+<!-- 代码高亮 Java -->
 <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
 <!-- 全文搜索 -->
 <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
@@ -59,5 +70,23 @@
 <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
 <!-- 字数统计 -->
 <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+<!-- 显示Emoji -->
+<script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+<!-- 分页导航 -->
+<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<!-- Gitalk -->
+<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '2cc5583c3f6e5083e644',
+        clientSecret: '902fe6a446480aaebf885900c9b3af47489e3bec',
+        repo: 'docsify-demo',
+        owner: 'yxy-tom',
+        admin: ['yxy-tom'],
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+    })
+</script>
 </body>
 </html>
